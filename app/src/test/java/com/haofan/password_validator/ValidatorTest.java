@@ -22,13 +22,16 @@ public class ValidatorTest {
     public void testIfIsValid() throws Exception{
         int passed_num;
         passed_num = validator.ifIsValid("PaSsWord");
-        assertEquals(1, passed_num);
+        assertEquals(2, passed_num);
 
         passed_num = validator.ifIsValid("1234567");
-        assertEquals(1, passed_num);
+        assertEquals(2, passed_num);
 
         passed_num = validator.ifIsValid("passWord1");
-        assertEquals(2, passed_num);
+        assertEquals(4, passed_num);
+
+        passed_num = validator.ifIsValid("passWord1'");
+        assertEquals(5, passed_num);
 
 
     }
